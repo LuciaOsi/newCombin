@@ -34,15 +34,22 @@ function validString (item) {
 }
 
 server.post(url, (req, res, next) => {
+  console.log(url);
   const body = req.body || {}
+  console.log(body)
   const firstName = body.firstName || ''
   const lastName = body.lastName || ''
   const address = body.address || ''
   const ssn = body.ssn || ''
+  console.log(firstName)
+  console.log(lastName)
+  console.log(address)
+  console.log(ssn)
   if (!validString(firstName) || !validString(lastName) || !validString(address)) {
     return next(new err.BadRequestError('Invalid first name, last name or address'))
   }
   const regex = /^\d{3}-\d{2}-\d{4}$/
+  console.log(regex.test(ssn))
   if (regex.test(ssn) === false) {
     return next(new err.BadRequestError('Invalid SSN'))
   }
@@ -51,13 +58,14 @@ server.post(url, (req, res, next) => {
   if (p !== -1) {
     return next(new err.BadRequestError('Duplicate SSN'))
   }  
-
+ console.log(members)
   members.push({
     firstName: firstName.trim(),
     lastName: lastName.trim(),
     address: address.trim(),
     ssn
   })
+  console.log(members)
   res.send(201)
 })
 

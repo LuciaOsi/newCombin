@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.container {
+  padding: 10px 10px 10px 10px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+form {
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 28px;
+}
+
+.card{
+  background-color: #7fdbad;
+  padding: 10px 10px 10px 10px;
+}
+
+.add-contact-container{
+  margin-left: 5%;
+}
+
+.button{
+ 
+  border-radius: 100%;
+}
+
+.button-container{
+  align-content: center;
+  text-align: center;
+}
+
+h6{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  text-align: left;
+  color: #d30f0f;}

@@ -18,9 +18,11 @@
   },
   "homepage": "https://gitlab.com/arsenyel/fast-api-cc#readme",
   "dependencies": {
-    "nodemon": "^1.19.4",
+    "fs": "0.0.1-security",
+    "nodemon": "^2.0.15",
     "restify": "^8.4.0",
     "restify-cors-middleware": "^1.1.1",
-    "restify-errors": "^8.0.1"
+    "restify-errors": "^8.0.1",
+    "utils": "^0.3.1"
   }
 }
